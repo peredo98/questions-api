@@ -17,7 +17,7 @@ ARG JAR_FILE=target/ng5-api-0.0.1-SNAPSHOT.jar
 ADD ${JAR_FILE} ng5-api.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/ng5-api.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/postgres-demo.jar"]
 
 # docker build
 # sudo docker build -t <dockerhub-user>/ng5-api .
