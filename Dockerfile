@@ -11,10 +11,10 @@ VOLUME /tmp
 EXPOSE 8192
 
 # The application's jar file
-ARG JAR_FILE=target/ng5-api-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/postgres-demo-0.0.1-SNAPSHOT.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} ng5-api.jar
+ADD ${JAR_FILE} postgres-demo.jar
 
 # Run the jar file 
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/postgres-demo.jar"]
