@@ -10,8 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
-//@CrossOrigin(origins = "*", maxAge = 3600)
-@CrossOrigin()
 @RestController
 public class QuestionController {
 
@@ -22,6 +20,7 @@ public class QuestionController {
     public Page<Question> getQuestions(Pageable pageable) {
         return questionRepository.findAll(pageable);
     }
+
 
     @PostMapping("/questions")
     public Question createQuestion(@Valid @RequestBody Question question) {

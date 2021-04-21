@@ -1,4 +1,3 @@
-
 package com.example.postgresdemo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -28,6 +27,8 @@ public class Answer extends AuditModel {
     private Question question;
 
     // Getters and Setters (Omitted for brevity)
+
+
     public Long getId() {
         return id;
     }
@@ -35,7 +36,6 @@ public class Answer extends AuditModel {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public String getText() {
         return text;
@@ -52,4 +52,7 @@ public class Answer extends AuditModel {
     public void setQuestion(Question question) {
         this.question = question;
     }
+
+
+
 }
