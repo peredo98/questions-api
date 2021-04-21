@@ -1,5 +1,5 @@
 # Start with a base image containing Java runtime
-FROM adoptopenjdk:8-jre-hotspot
+FROM adoptopenjdk:11-jre-hotspot
 
 # Add Maintainer Info
 LABEL maintainer="peredo98@hotmail.com"
