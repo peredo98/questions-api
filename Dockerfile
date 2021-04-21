@@ -1,8 +1,8 @@
 # Start with a base image containing Java runtime
-FROM openjdk:8-jdk-alpine
+FROM adoptopenjdk:8-jre-hotspot
 
 # Add Maintainer Info
-LABEL maintainer="adsoft@live.com.mx"
+LABEL maintainer="peredo98@hotmail.com"
 
 # Add a volume pointing to /tmp
 VOLUME /tmp
@@ -14,13 +14,13 @@ EXPOSE 8153
 ARG JAR_FILE=target/postgres-demo-0.0.1-SNAPSHOT.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} postgres-demo.jar
+ADD ${JAR_FILE} postgres-api.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/postgres-demo.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/postgres-api.jar"]
 
 # docker build
-# sudo docker build -t <dockerhub-user>/ng5-api .
+# sudo docker build -t <dockerhub-user>/postgres-api .
 
 # docker run
-# sudo docker run --name <linuxuser>-api -p 8xxx:8080 -d <dockerhub-user>/ng5-api  
+# sudo docker run --name <linuxuser>-api -p 8xxx:8080 -d <dockerhub-user>/postgres-api
